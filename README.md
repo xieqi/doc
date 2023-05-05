@@ -1,8 +1,6 @@
 # Overview
 Gluten: Plugin to Double SparkSQL's Performance
 
-Test Test
-
 *<b>This plugin is still under active development now, and doesn't have a stable release. Welcome to evaluate it. If you encounter any issues or have any suggestions, please submit to our issue list. We'd love to hear your feedback</b>*
 
 # 1 Introduction
@@ -97,17 +95,17 @@ spark-shell
 
 <img src="https://github.com/facebookincubator/velox/raw/main/static/logo.svg" width="200">
 
-If you would like to build and try Gluten with **Velox** backend, please follow the steps in [Build with Velox](./docs/Velox.md) to build and install the necessary libraries, compile Velox and try out the TPC-H workload.
+If you would like to build and try Gluten with **Velox** backend, please follow the steps in [Build Gluten with Velox Backend](/docs/get-started/Velox.md/#2-build-gluten-with-velox-backend) to build and install the necessary libraries, compile Velox and try out the TPC-H workload.
 
 ### 3.2.2 Build and Install Gluten with ClickHouse backend
 
 ![logo](./docs/image/ClickHouse/logo.png)
 
-If you would like to build and try  Gluten with **ClickHouse** backend, please follow the steps in [Build with ClickHouse Backend](./docs/ClickHouse.md). ClickHouse backend is developed by [Kyligence](https://kyligence.io/), please visit https://github.com/Kyligence/ClickHouse for more infomation.
+If you would like to build and try  Gluten with **ClickHouse** backend, please follow the steps in [Build Gluten with ClickHouse Backend](/docs/get-started/ClickHouse.md). ClickHouse backend is developed by [Kyligence](https://kyligence.io/), please visit https://github.com/Kyligence/ClickHouse for more infomation.
 
 ### 3.2.3 Build script parameters
 
-[Gluten Usage](./docs/GlutenUsage.md) listed the parameters and their default value of build command for your reference
+[Gluten Usage](/docs/get-started/GlutenUsage.md) listed the parameters and their default value of build command for your reference
 
 ### 3.2.4 Jar conflicts
 
@@ -136,9 +134,9 @@ Feel free to submit any bugs, issues or enhancement requirements to github issue
 
 ## 4.3 Documentation
 
-Unfortunately we haven't organized the documentation site for Gluten. Currently all document is hold in [docs](https://github.com/oap-project/gluten/tree/main/docs). Ping us if you would like to know more details about the Gluten design. Gluten is still under development now, and some designs may change. Feel free to talk with us and share other design and ideas.
+We have organized the documentation site for Gluten. Currently all document is hold in [docs](https://oap-project.github.io/gluten/). Ping us if you would like to know more details about the Gluten design. Gluten is still under development now, and some designs may change. Feel free to talk with us and share other design and ideas.
 
-CppCodingStyle.md is provided for the purpose of helping C++ developers to contribute code, this work is still in progress, so propose a new modification PR without any hesitation if you have good ideas. [CppCodingStyle.md](https://github.com/oap-project/gluten/tree/main/docs/developers/CppCodingStyle.md)
+[CppCodingStyle](/docs/developers/CppCodingStyle.md) is provided for the purpose of helping C++ developers to contribute code, this work is still in progress, so propose a new modification PR without any hesitation if you have good ideas. 
 
 # 5 Performance
 
