@@ -1,3 +1,10 @@
+---
+layout: default
+title: Home
+nav_order: 1
+permalink: /
+description: This site serves as a collection of documentation about the Gluten, a plugin to Double SparkSQL's Performance
+---
 # Overview
 Gluten: Plugin to Double SparkSQL's Performance
 
@@ -30,7 +37,7 @@ The basic rule of Gluten's design is that we would reuse spark's whole control f
 
 ## 1.3 Target User
 
-Gluten targets to the Spark administrators and Spark users who want to improve their spark cluster's performance fundamentally. Gluten is a plugin to Spark. It's designed to offload the SQL engine to native without any dataframe API or SQL query changes. SparkSQL users can run their current Spark job on Gluten seamlessly, no code changes are needed. However as a plugin, Gluten needs some configurations to enable it when you start Spark context. All configurations are listed [here](https://github.com/oap-project/gluten/blob/main/docs/Configuration.md)
+Gluten targets to the Spark administrators and Spark users who want to improve their spark cluster's performance fundamentally. Gluten is a plugin to Spark. It's designed to offload the SQL engine to native without any dataframe API or SQL query changes. SparkSQL users can run their current Spark job on Gluten seamlessly, no code changes are needed. However as a plugin, Gluten needs some configurations to enable it when you start Spark context. All configurations are listed [here](docs/Configuration.md)
 
 ## 1.4 References:
 
@@ -101,7 +108,7 @@ If you would like to build and try Gluten with **Velox** backend, please follow 
 
 ![logo](./docs/image/ClickHouse/logo.png)
 
-If you would like to build and try  Gluten with **ClickHouse** backend, please follow the steps in [Build Gluten with ClickHouse Backend](/docs/get-started/ClickHouse.md). ClickHouse backend is developed by [Kyligence](https://kyligence.io/), please visit https://github.com/Kyligence/ClickHouse for more infomation.
+If you would like to build and try  Gluten with **ClickHouse** backend, please follow the steps in [Build Gluten with ClickHouse Backend](/docs/get-started/ClickHouse.md). ClickHouse backend is developed by [Kyligence](https://kyligence.io/), please visit [here](https://github.com/Kyligence/ClickHouse) for more infomation.
 
 ### 3.2.3 Build script parameters
 
@@ -153,7 +160,7 @@ The testing environment is using a 8-nodes AWS cluster with 1TB datasize and usi
 
 # 6 License
 
-Gluten is under Apache 2.0 license(https://www.apache.org/licenses/LICENSE-2.0).
+Gluten is under [Apache 2.0 license](https://www.apache.org/licenses/LICENSE-2.0).
 
 # 7 Contact
 
@@ -163,12 +170,8 @@ rui.mo@intel.com; binwei.yang@intel.com; weiting.chen@intel.com;
 chang.chen@kyligence.io; zhichao.zhang@kyligence.io; neng.liu@kyligence.io;
 zuochunwei@meituan.com;yangchuan.zy@alibaba-inc.com;xiyu.zk@alibaba-inc.com;joey.ljy@alibaba-inc.com
 
-#
-
 <img src="./docs/image/intel_logo.jpg" width="200"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<img src="./docs/image/kyligence_logo.png" width="500"><br>
 <img src="./docs/image/bigo_logo.png" width="200"> &nbsp; &nbsp; &nbsp;  &nbsp; &nbsp; &nbsp; <img src="./docs/image/meituan_logo.png" width="200">
-
-#
 
 Intel, the Intel logo, Arc, Intel Atom, Intel Core, Iris, OpenVINO, the OpenVINO logo, Pentium, VTune, and Xeon are trademarks of Intel Corporation or its subsidiaries.
 * Other names and brands may be claimed as the property of others.
