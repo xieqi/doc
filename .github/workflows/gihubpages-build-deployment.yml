@@ -1,0 +1,57 @@
+# Licensed to the Apache Software Foundation (ASF) under one
+# or more contributor license agreements.  See the NOTICE file
+# distributed with this work for additional information
+# regarding copyright ownership.  The ASF licenses this file
+# to you under the Apache License, Version 2.0 (the
+# "License"); you may not use this file except in compliance
+# with the License.  You may obtain a copy of the License at
+#
+#   http://www.apache.org/licenses/LICENSE-2.0
+#
+# Unless required by applicable law or agreed to in writing,
+# software distributed under the License is distributed on an
+# "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
+# KIND, either express or implied.  See the License for the
+# specific language governing permissions and limitations
+# under the License.
+
+# This is a workflow to build and deployment github pages
+
+name: githubpages-build-deployment
+
+on:
+  # Triggers the workflow only when files under 'docs' changed on main branch
+  push:
+    branches: [ 'main' ]
+    paths: 
+      - 'docs/**'
+      - 'README.md'
+
+jobs:
+  pages-build-deployment:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3     
+
+      - name: config
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+      
+      - name: commit
+        run: |
+          git fetch
+          cp -a docs temp-docs
+          cp README.md README.md.temp
+          git checkout gh-pages
+          rm -rf docs
+          cp  -a temp-docs docs
+          rm -rf temp-docs
+          rm -rf README.md
+          cp README.md.temp README.md
+          rm -rf README.md.temp
+          git commit -a -m "update gh-pages"
+      
+      - name: push
+        run: |
+          git push origin gh-pages
