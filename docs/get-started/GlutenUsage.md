@@ -48,14 +48,16 @@ Please set them via `--`, e.g., `--velox_home=/YOUR/PATH`.
 | enable_s3  | Build Velox with -DENABLE_S3              | OFF           |
 | enable_hdfs | Build Velox with -DENABLE_HDFS           | OFF           |
 | build_protobuf | build protobuf from source            | ON           |
+| run_setup_script | Run Velox setup script before build | ON           |
 
 ## Maven building parameters
 To build different backends, there are 3 parameters can be set via `-P` for mvn.
 
-| Parameters               | Description                                                                                      | Activation state by default |
-|--------------------------|--------------------------------------------------------------------------------------------------|-----------------------------|
-| backends-velox           | Add -Pbackends-velox in maven command to compile the JVM part of Velox backend.                  | disabled                    |
-| backends-clickhouse      | Add -Pbackends-clickhouse in maven command to compile the JVM part of ClickHouse backend.        | disabled                    |
+| Parameters          | Description                                                                                    | Activation state by default |
+|---------------------|------------------------------------------------------------------------------------------------|-----------------------------|
+| backends-velox      | Add -Pbackends-velox in maven command to compile the JVM part of Velox backend.                | disabled                    |
+| backends-clickhouse | Add -Pbackends-clickhouse in maven command to compile the JVM part of ClickHouse backend.      | disabled                    |
+| rss                 | Add -Prss in maven command to compile the JVM part of rss, current only support Velox backend. | disabled                    |
 
 # Gluten jar for deployment
 
